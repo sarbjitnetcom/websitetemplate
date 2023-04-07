@@ -59,40 +59,13 @@ body {
   font-family: "Roboto", sans-serif; }
 
 a {
-  color: #616266;
-    cursor: pointer;
-    outline: none;
-    outline-color: initial;
-    outline-style: none;
-    outline-width: initial;
-    -webkit-transition: 0.5s;
-    -o-transition: 0.5s;
-    transition: 0.5s;
-    text-decoration: none;
-    font-weight: 800;
- }
- .service_title {
-  color: #fff !important;
- }
- .h_title1 {
-  color: #fff !important;
- }
- .btn_slider {
-  color: #353535 !important;
- }
- .con_btn {
-  color: #fff !important;
- }
- .style_btn {
-  color: #1d1c1c !important;
-  border: 1px solid rgb(10 10 10 / 55%) !important;
- }
- .call_h{
-  color: #fff !important;
- }
- .call-to-action-area1 .lets_btn a:hover {
-     color: #ffffff;
- }
+  color: #696e7b;
+  cursor: pointer;
+  outline: none;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  text-decoration: none; }
   a:hover, a:focus, a:visited {
     text-decoration: none;
     outline: none; }
@@ -333,13 +306,7 @@ html {
       .section-title .sub-title.style-two:after {
         display: none; }
   .section-title h2 {
-    margin-bottom: 5px;
-    line-height: 1.22;
-    font-size: 45px;
-    font-weight: 700;
-    color: #293043;
-    font-family: "Merriweather", serif;
-  }
+    margin-bottom: 5px; }
     @media only screen and (max-width: 767px) {
       .section-title h2 {
         font-size: 35px; } }
@@ -1040,8 +1007,7 @@ a.theme-btn {
 
 /* Home One */
 .home-one {
-  /* font-family: 'Catamaran', sans-serif;  */
-}
+  font-family: 'Catamaran', sans-serif; }
   .home-one .count-text,
   .home-one .price-and-btn .price,
   .home-one .blog-item .content h4,
@@ -1050,9 +1016,7 @@ a.theme-btn {
   .home-one .h1, .home-one .h2, .home-one .h3, .home-one .h4, .home-one .h5, .home-one .h6,
   .home-one .blog-item .content .post-by a,
   .home-one .work-process-item .number {
-    /* font-family: 'Kumbh Sans', sans-serif; */
-    font-family: "Merriweather", serif;
-  }
+    font-family: 'Kumbh Sans', sans-serif; }
   .home-one a:hover,
   .home-one .details-btn,
   .home-one .slick-arrow,
@@ -1063,7 +1027,7 @@ a.theme-btn {
   .home-one .section-title .sub-title,
   .home-one .list-style-two li a:hover,
   .home-one .social-style-two a:not(:hover) {
-    color: #004777; }
+    color: #fc653c; }
   .home-one .theme-btn,
   .home-one .scroll-top,
   .home-one .details-btn:hover,
@@ -1084,7 +1048,7 @@ a.theme-btn {
   .home-one .theme-btn.style-three:hover,
   .home-one .work-process-item .icon:before,
   .home-one .hidden-bar .social-style-one a:hover {
-    border-color: #01c9f5 !important; }
+    border-color: #01c9f5; }
   .home-one .slick-arrow:focus,
   .home-one .slick-arrow:hover,
   .home-one .details-btn:hover,
@@ -1102,16 +1066,7 @@ a.theme-btn {
     background-image: url(../images/preloader2.gif); }
   .home-one .text-center .sub-title:after, .home-one .text-center .sub-title:before {
     display: block; }
-    .marketing {
-      color: #004777;
-  }
-  .home_class{
-    font-weight: 700;
-    color: #293043;
-    font-family: "Merriweather", serif !important;
-    line-height: 1.65;
-    font-size: 24px;
-  }
+
 /* Home Two */
 @media only screen and (min-width: 768px) {
   .home-two h2 {
@@ -3820,7 +3775,7 @@ h6, .h6 {
 /* Menu White */
 .main-header.header-two {
   position: absolute;
-  background: #fff !important; 
+  background-color: #fff !important;
 }
   @media only screen and (min-width: 992px) {
     .main-header.header-two .nav-outer {
@@ -3830,17 +3785,16 @@ h6, .h6 {
   @media only screen and (min-width: 992px) {
     .main-header.header-two .main-menu .navigation > li > a,
     .main-header.header-two .main-menu .navigation > .dropdown > .dropdown-btn {
-      color: black; } }
+      color: white; } }
   .main-header.header-two .main-menu .navigation li li a:hover {
-    color: #0554cc; }
+    color: #fc653c; }
   .main-header.header-two .menu-sidebar button .icon-bar,
   .main-header.header-two .main-menu .navbar-toggle .icon-bar {
     background: white; }
   .main-header.header-two .menu-btns .theme-btn.style-three:not(:hover) {
-    border-color: #0066ff;
-    background: #0066ff; }
+    border-color: white; }
   .main-header.header-two.fixed-header .header-upper {
-    background: #fff; }
+    background: #17171a; }
 
 /*******************************************************/
 /******************** 07. Hero Area ********************/
@@ -8315,9 +8269,8 @@ h4.comment-title {
   border: 1px solid rgba(0, 102, 255, 0.1); }
 
 .main-footer.footer-two .footer-bottom {
-  border-top: 1px solid rgba(0, 102, 255, 0.1);
-  background: #024e7f;
-}
+  border-top: none;
+  background: #e9e9ec; }
 
 /*******************************************************/
 /****************** 28. Dark Version *******************/
