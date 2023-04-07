@@ -1,41 +1,99 @@
-import Head from "next/head";
-import Link from "next/link";
-import { Fragment } from "react";
 import Slider from "react-slick";
-import Counter from "../src/components/Counter";
-import ClientsFeedback from "../src/components/home1/ClientsFeedback";
-import Hero1 from "../src/components/home1/Hero1";
-import RecentProjects from "../src/components/home1/RecentProjects";
-import CallToAction from "../src/components/CallToAction";
-import { feedbackActive } from "../src/sliderProps";
 import Layout from "../src/layout/Layout";
+import { feedbackActive } from "../src/sliderProps";
 
+import dynamic from "next/dynamic";
+import Link from "next/link";
+import Counter from "../src/components/Counter";
+import Hero1 from "../src/components/home1/Hero1";
+import CallToAction from "../src/components/CallToAction";
 
+const PreMadeTemplateIsotope = dynamic(
+  () => import("../src/components/Isotope/PreMadeTemplateIsotope"),
+  {
+    ssr: false,
+  }
+);
 
-const Index = () => {
+const index3 = () => {
   return (
-    <Fragment>
-      <Head>
-        {" "}
-        <link
-          rel="shortcut icon"
-          href="assets/images/favicon1.png"
-          type="image/x-icon"
-        />
-      </Head>
-      <Layout header={1} className="home-one" footer={1}>
-        {/*End Hidden Sidebar */}
-        {/* Slider Section Start */}
-        <Hero1 />
-        {/* Slider Section End */}
-        {/* Core Feature start */}
-        <section className="feature-area-five bgc-lighter pt-100 pb-70">
-          <div className="container">
-            <div className="section-title text-center mb-60 wow fadeInUp delay-0-2s">
-              <span className="sub-title mb-10">WHO WE ARE</span>
+    <Layout>
+      <Hero1></Hero1>
+      
+      {/* <section className="features-area-two pt-130 rel z-1">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-xl-3 col-lg-4 col-md-6">
+              <div className="feature-item-two mt-60 wow fadeInUp delay-0-2s">
+                <div className="icon">
+                  <i className="fas fa-check" />
+                </div>
+                <h4>
+                  249+ UI <br />
+                  Components
+                </h4>
+                <p>
+                  Sit amet conse adipiscin elitec eiusmod tempors incidide sesy
+                  labore dolore another
+                </p>
+              </div>
+            </div>
+            <div className="col-xl-3 col-lg-4 col-md-6">
+              <div className="feature-item-two color-two wow fadeInUp delay-0-4s">
+                <div className="icon">
+                  <i className="fas fa-check" />
+                </div>
+                <h4>
+                  5630+ <br />
+                  Web Templates
+                </h4>
+                <p>
+                  Sit amet conse adipiscin elitec eiusmod tempors incidide sesy
+                  labore dolore another
+                </p>
+              </div>
+            </div>
+            <div className="col-xl-3 col-lg-4 col-md-6">
+              <div className="feature-item-two color-three mt-60 wow fadeInUp delay-0-6s">
+                <div className="icon">
+                  <i className="fas fa-check" />
+                </div>
+                <h4>
+                  9562+ <br />
+                  Digital Assets
+                </h4>
+                <p>
+                  Sit amet conse adipiscin elitec eiusmod tempors incidide sesy
+                  labore dolore another
+                </p>
+              </div>
+            </div>
+            <div className="col-xl-3 col-lg-4 col-md-6">
+              <div className="feature-item-two color-four wow fadeInUp delay-0-8s">
+                <div className="icon">
+                  <i className="fas fa-check" />
+                </div>
+                <h4>
+                  4563+ <br />
+                  Custome Addon
+                </h4>
+                <p>
+                  Sit amet conse adipiscin elitec eiusmod tempors incidide sesy
+                  labore dolore another
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> */}
+      <section>
+        <div className="container">
+          <div className="row text-center">
+            <div className="col-md-12 mb-50">
+              <h6 class="title-who-we mt-60 ">WHO WE ARE</h6>
               <h2>We are providing IT and Digital Marketing Solutions for more than 7 years</h2>
               <h3 class="marketing">Proactive & Effective Marketing Solutions</h3>
-              <h4 class="home_class">For Small-To-Medium Sized Businesses</h4>
+              <h4>For Small-To-Medium Sized Businesses</h4>
               <p>NetCom Business Solutions Private Limited is recognised as the Top Digital Marketing Company in Pune. 
                 We focus on fostering the areas like Web Design &amp; Development, SEO, SMM, Digital Marketing Services, 
                 Web Advertisements, and Developing Creative Content resulting in Fully Managed and Highly Successful 
@@ -62,17 +120,20 @@ const Index = () => {
                   We, as Among the Top digital marketing companies in pune, leave no stone unturned to let your 
                   business be armed with a distinctive tag.
               </p>
+                
+              <Link href="/about">
+                <a class="wel-readmore"> Read More </a>
+              </Link>
+                  
             </div>
-            
           </div>
-        </section>
-        {/* Core Feature end */}
-        {/* About Us Area start */}
-        <section className="feature-area-four pb-100 rel z-1 pt-60 bgc-black">
+        </div>
+      </section>
+      <section className="feature-area-four pb-100 rel z-1 pt-60 bgc-black">
         <div className="container">
           <div className="section-title text-center mb-50 wow fadeInUp delay-0-2s">
-            <span className="sub-title style-two mb-15 service_title">OUR SERVICES</span>
-            <h2 class="h-title h_title1">We providing exclusive <br></br>services for your business</h2>
+            <span className="sub-title style-two mb-15">OUR SERVICES</span>
+            <h2 class="h-title">We providing exclusive <br></br>services for your business</h2>
           </div>
           <div className="row justify-content-center">
             <div className="col-xl-4 col-md-6">
@@ -85,7 +146,7 @@ const Index = () => {
                 </h4>
                 <div className="slider-btns">
                   <Link href="/services">
-                    <a className="theme-btn style-three style_btn">
+                    <a className="theme-btn style-three">
                       Read More <i className="fas fa-angle-double-right" />
                     </a>
                   </Link>
@@ -100,7 +161,7 @@ const Index = () => {
                 </h4>
                 <div className="slider-btns ">
                   <Link href="/ecommerce-solutions">
-                    <a className="theme-btn style-three style_btn">
+                    <a className="theme-btn style-three">
                       Read More <i className="fas fa-angle-double-right" />
                     </a>
                   </Link>
@@ -115,7 +176,7 @@ const Index = () => {
                 </h4>
                 <div className="slider-btns">
                   <Link href="/applications-development">
-                    <a className="theme-btn style-three style_btn">
+                    <a className="theme-btn style-three">
                       Read More <i className="fas fa-angle-double-right" />
                     </a>
                   </Link>
@@ -130,7 +191,7 @@ const Index = () => {
                 </h4>
                 <div className="slider-btns">
                   <Link href="/digital-marketing">
-                    <a className="theme-btn style-three style_btn">
+                    <a className="theme-btn style-three">
                       Read More <i className="fas fa-angle-double-right" />
                     </a>
                   </Link>
@@ -145,7 +206,7 @@ const Index = () => {
                 </h4>
                 <div className="slider-btns">
                   <Link href="/ui-ux-designing">
-                    <a className="theme-btn style-three style_btn">
+                    <a className="theme-btn style-three">
                       Read More <i className="fas fa-angle-double-right" />
                     </a>
                   </Link>
@@ -160,7 +221,7 @@ const Index = () => {
                 </h4>
                 <div className="slider-btns">
                   <Link href="/services">
-                    <a className="theme-btn style-three style_btn">
+                    <a className="theme-btn style-three">
                       Read More <i className="fas fa-angle-double-right" />
                     </a>
                   </Link>
@@ -170,9 +231,7 @@ const Index = () => {
           </div>
         </div>
       </section>
-        {/* About Us Area end */}
-        {/* Statistics Three Area start */}
-        <section className="ww-do-area pt-100 pb-130 rel z-1">
+      <section className="ww-do-area pt-100 pb-130 rel z-1">
         <div className="container">
           <div className="row justify-content-between align-items-center">
             <div className="col-xl-5 col-lg-6">
@@ -237,9 +296,7 @@ const Index = () => {
           </div>
         </div>
       </section>
-        {/* Statistics Three Area end */}
-        {/* Design Featured Start */}
-        <section className="feature-with-image-area bgc-black1 text-white py-50 rel z-1">
+      <section className="feature-with-image-area bgc-black1 text-white py-50 rel z-1">
         <div className="container">
           <div className="row">
             <div className="col-md-12 mb-50">
@@ -274,13 +331,8 @@ const Index = () => {
         
         </div>
       </section>
-        {/* Design Featured End */}
-        {/* Project Area start */}
-        {/* <RecentProjects /> */}
-        {/* Project Area end */}
-        {/* Working Process Area start */}
-        <section
-        className="statistics-area-two bgc-lighter bgs-cover pt-40 pb-0 rel z-1"
+      <section
+        className="statistics-area-two bgc-lighter bgs-cover pt-130 pb-100 rel z-1"
         style={{
           backgroundImage:
             "url(assets/images/features/support-features-bg.png)",
@@ -351,16 +403,78 @@ const Index = () => {
           </div>
         </div>
       </section>
-        {/* Working Process Area end */}
-        {/* CTA Area start */}
-        <CallToAction></CallToAction>
-        
-        {/* CTA Area end */}
-        {/* Pricing Two Area start */}
-       
-        {/* Pricing Two Area end */}
-        {/* Testimonial Area Start */}
-        <section className="feedback-area pb-130 pt-50 rel z-1">
+      {/* <section className="project-area-two pt-130 pb-100 rel z-1">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-xl-6 col-lg-7">
+              <div className="section-title text-center mb-50 wow fadeInUp delay-0-2s">
+                <span className="sub-title style-two mb-15">
+                  Pre-made Template
+                </span>
+                <h2>Let’s See Our Popular Website Template</h2>
+              </div>
+            </div>
+          </div>
+          <PreMadeTemplateIsotope />
+        </div>
+      </section>
+       */}
+      
+      {/* <section className="why-choose-two-area py-130 rel z-1">
+        <div className="container">
+          <div className="row justify-content-between align-items-center">
+            <div className="col-lg-6">
+              <div className="why-choose-two-image rmb-65 wow fadeInUp delay-0-4s">
+                <img
+                  src="assets/images/about/why-choose-us-two.png"
+                  alt="why choose us"
+                />
+              </div>
+            </div>
+            <div className="col-xl-5 col-lg-6">
+              <div className="why-choose-two-content wow fadeInUp delay-0-2s">
+                <div className="section-title mb-35">
+                  <span className="sub-title style-two mb-15">
+                    Why Choose Us
+                  </span>
+                  <h2>Great Web solutions that you can trust</h2>
+                </div>
+                <ul className="list-style-one">
+                  <li>
+                    <div className="content">
+                      <h5>Easy Customize</h5>
+                      <p>
+                        We use strategic marketing tactics have been ese proven
+                        programming complex functions.
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div className="content">
+                      <h5>{`Chat &amp; Messaging`}</h5>
+                      <p>
+                        We use strategic marketing tactics have been eses proven
+                        programming complex functions.
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div className="content">
+                      <h5>Payment Gatway</h5>
+                      <p>
+                        We use strategic marketing tactics have been eses proven
+                        programming complex functions.
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> */}
+      <CallToAction></CallToAction>
+      <section className="feedback-area pb-130 pt-50 rel z-1">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-xl-6 col-lg-8">
@@ -433,11 +547,9 @@ const Index = () => {
           <img src="assets/images/feedback/man2.jpg" alt="Man Shape" />
         </div>
       </section>
-        {/* Testimonial Area End */}
-        {/* Contact Area Start */}
-       
-      </Layout>
-    </Fragment>
+      
+    </Layout>
+    
   );
 };
-export default Index;
+export default index3;
