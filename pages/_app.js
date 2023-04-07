@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <Fragment>
       <Head>
-        <title>Oxence - Web Design Company React NextJS Template</title>
+        <title> NetCom Business Solutions Pvt. Ltd.</title>
         <link
           rel="shortcut icon"
           href="assets/images/favicon.png"
